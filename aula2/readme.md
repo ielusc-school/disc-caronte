@@ -41,4 +41,4 @@ As `Expressions` nos ajudam a compreender o processo da computação, veja o exe
 ```
 >  12 + square(7+5) + square(square(2)); 
 
-Com base no exemplo acima, agora começamos a compreender que expressão nos retornam sempre valores, 
+Com base no exemplo acima, agora começamos a compreender que expressão nos retornam sempre valores. 
