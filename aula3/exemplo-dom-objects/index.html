@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <p>Meu Tradutor</p>
+    </div>
+  </header>
+  <main>
+    <div class="area-original">
+      <textarea 
+        class="input-content" 
+        name="" 
+        id="output" 
+        cols="30" 
+        rows="10">
+      </textarea>
+    </div>
+    <div class="area-translate">
+      <textarea 
+        class="shadow" 
+        name="" 
+        id="output" 
+        cols="30" 
+        rows="10">
+      </textarea>
+    </div>
+  </main>
+
+  <button class="btn-default" id="copy" onclick="copy()">Copiar</button>
+  <button class="btn-default" id="paste" onclick="paste()">Colar</button>
+
+  <script>
+   function copy() {
+    var copyText = document.querySelector('.input-content');
+    console.log(copyText);
+    copyText.select();
+    document.execCommand('copy');
+    console.log('texto copiado', copyText.value);
+    copyText.value = '';
+    }
+
+
+    function paste() {
+      var pasteText = document.querySelector('.shadow');
+      pasteText.contentEditable = true;
+      console.log(pasteText);
+      pasteText.focus();
+      document.execCommand('paste');
+      console.log(pasteText.textContent);
+    }
+
+
+
+    function getContent() {
+      document.querySelector("#copy")
+      .addEventListener("click", async () => {
+        try {
+          console.log('copiei o conteúdo');
+          await copy;
+        } catch(error) {
+          console.error('copy', error);
+        }
+      });
+    }
+
+    function setContent() {
+      document.querySelector("#paste")
+        .addEventListener("click", async () => {
+        try {
+          console.log('colei o conteudo');
+          await paste;
+        } catch(error) {
+          console.error('paste', error);
+        } 
+      });
+    }
+
+  </script>
+</body>
+</html>

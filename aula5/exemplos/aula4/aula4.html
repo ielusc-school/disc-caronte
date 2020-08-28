@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>v-for</title>
+</head>
+<body>
+  <div id="app">
+    <h1>v-for</h1>
+    <p> 
+      <strong> Definição: </strong>
+    </p>
+    <hr>
+    <p> Exemplo: </p>
+    <ul v-for="fruit in fruits" v-key="fruit.key">
+      <li> {{ fruit }} </li>
+    </ul>
+
+    <section>
+      <table>
+        <thead>
+          <th> id </th>
+          <th> Name </th>
+          <th> Age</th>
+          <th> Sex</th>
+        </thead>
+        <tbody> 
+          <tr v-for="person in persons">
+            <td> {{ person.id }} </td>
+            <td> {{ person.name }} </td>
+            <td> {{ person.age }} </td>
+            <td> {{ person.sex }} </td>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./aula4.js"></script>
+</body>
+</html>

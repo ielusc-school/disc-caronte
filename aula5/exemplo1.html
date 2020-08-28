@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo - Vue 0</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1> Agenda de Contatos | Milium</h1>
+          <form v-on:submit.prevent="addPerson()">
+            <label for="">Nome</label>
+            <input 
+              type="text" 
+              v-model="personField.name" 
+              placeholder="Insira seu nome">
+
+              <label for="">Sexo</label>
+              <input 
+                type="text" 
+                v-model="personField.sex" 
+                placeholder="">
+
+                <label for="">Idade</label>
+                <input 
+                  type="text" 
+                  v-model="personField.age" 
+                  placeholder="">
+              <button class="btn btn-primary"> Adicionar Pessoa</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table 
+            class="table table-striped table-hover" 
+            v-if="status">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="person in persons" :key="person.id">
+                <td>{{person.id}}</td>
+                <td>{{person.name}}</td>
+                <td>{{person.sex}}</td>
+                <td>{{person.age}}</td>
+                <td> 
+                  <button 
+                    class="btn btn-default"
+                    @click="deletePerson(person.id)"> Remover
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div v-else>
+            <p>Não há dados de pessoas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  const vm = new Vue({
+    el: '#app',
+    data: {
+      persons: [ 
+        {id: 01, name: 'João Antonio', sex: 'male', age: 30 },
+        {id: 02, name: 'José da Silva', sex: 'male', age: 30 },
+        {id: 03, name: 'Carlos Figueira', sex: 'male', age: 30},
+        {id: 04, name: 'Joseph Damiani', sex: 'male', age: 30 },
+        {id: 05, name: 'Ruan Antonio', sex: 'male', age: 30 },
+        {id: 06, name: 'Maria da Silva', sex: 'female', age: 30 },
+      ],
+      status: true,
+      personField: {
+        name: '',
+        sex: '',
+        age: '',
+      }
+    },
+    computed: {
+      translateSexPerson() {
+        return this.persons.filter(item) === male ? 'masculino' : 'feminino';
+      },
+    },
+    methods: {
+      addPerson() {
+        if(this.persons.trim !== '') {
+          this.persons.push({
+            id: this.persons.length+1,
+            name: this.personField.name,
+            sex: this.personField.sex,
+            age: this.personField.age,
+          });
+          this.personField = {};
+        }
+      },
+      deletePerson(id) {
+        this.persons = this.persons
+          .filter(item => item.id !== id);
+      },
+    },
+  });
+</script>
+</body>
+</html>

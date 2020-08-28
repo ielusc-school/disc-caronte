@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulários</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Formulários</h1>
+    <p> 
+      <strong> Definição: </strong>
+    </p>
+    <hr>
+    <p> Exemplo: </p>
+    <form action="">
+    <fieldset>
+      <p> Selecione os gêneros de música que tu gosta: </p>
+      <label for="">Rock 
+        <input 
+          type="checkbox" 
+          value="Rock"
+          v-model="isLikedGenre">
+      </label> <br>
+      <label for="">Samba 
+        <input 
+          type="checkbox" 
+          value="Samba"
+          v-model="isLikedGenre">
+       </label><br>
+      <label for="">Pop 
+        <input 
+          type="checkbox" 
+          value="Pop"
+          v-model="isLikedGenre">
+      </label><br>
+      <label for="">Electronic 
+        <input 
+          type="checkbox" 
+          value="Electronic"
+          v-model="isLikedGenre">
+      </label><br>
+      <label for="">R&B 
+        <input 
+          type="checkbox" 
+          value="R&B"
+          v-model="isLikedGenre">
+      </label><br>
+    </fieldset>
+    </form>
+    <span>  Checked Genre:  {{ isLikedGenre || json }}
+    </span>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./aula8.js"></script>
+</body>
+</html>

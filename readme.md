@@ -33,4 +33,7 @@ Instrutor: [Cristofer Sousa](http://github.com/cristofersousa/)
 |  Aula 01   | Apresentação da Disciplina                          | Done   |
 |  Aula 02   | Tipo de Dados, Condicionais, Functions              | Done   |
 |  Aula 03   | Arrays e Objetos                                    | Done   |
-|  Aula 04   | Arrays, Assíncronismo, DOM, Debug                   | WIP    |
+|  Aula 04   | Arrays, Debug                                       | Done   |
+|  Aula 05   | Vue,  Assíncronismo,                                | WIP    |
+
+

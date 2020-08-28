@@ -1,0 +1,85 @@
+<html>
+  <head> 
+    <title>Hello Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+  <div id="app">
+
+    <section>
+      <form v-on:submit.prevent="addTask()">
+        <label>Adicionar Tarefa</label>
+        <input 
+          type="text" 
+          placeholder="inserir tarefa"
+          v-model="taskField">
+        <button>Adicionar tarefa</button>
+
+        <input 
+        type="color" 
+        placeholder="inserir tarefa"
+        v-model="colors">
+        <span> {{colors}}</span>
+
+      </form>
+    </section>
+
+    <div>
+      <label for="">Buscar</label>
+      <input type="text" v-model="taskItem">
+      <button @click="findTask(taskItem)">Buscar tarefa</button>
+    </div>
+   
+    <div>
+      <ul>
+        <li v-for="task in tasks" :key="task.id">{{task.id}} - {{task.title}} 
+          <button @click="removeTask(task.id)"> Remover </button> 
+        </li>
+      </ul> 
+    </div>
+  
+  </div>  
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        colors: '',
+        taskField: '',
+        taskItem: '',
+        taskFiltered: [],
+        tasks: [
+          { id: 01, title: 'javascript', status: false},
+          { id: 02, title: 'node', status: false},
+          { id: 03, title: 'spring', status: false},
+        ],
+      },
+      computed: {
+        listFiltered() {
+         return this.taskFiltered;
+        },
+      },
+      methods: {
+        addTask() {
+          if(this.taskField.trim !== '') {
+          this.tasks.push({
+            id: this.tasks.length+1,
+            title: this.taskField,
+            status: false
+          });
+          this.taskField=  '';
+          }
+        },
+        removeTask(id) {
+          this.tasks = this.tasks.filter(item => item.id !== id);
+        },
+        findTask(task) {
+          console.log(task);
+          const result = this.tasks.map( item => item.title === task );
+          this.taskFiltered = result;
+          console.log(this.taskFiltered);
+        },
+      },
+    });
+  </script>
+  </body>
+</html>

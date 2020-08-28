@@ -1,0 +1,28 @@
+<html>
+  <head> 
+    <title>Hello Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+  <div id="app">
+    <p>{{ hello }}</p>
+    <button @click="incrementar"> Clicar </button>
+    <span> Contador de Cliques {{ cliques }}</span>
+  </div>  
+  <script>
+    new Vue({ // instância Vue
+      el: '#app', // nosso seletor CSS
+      data: {
+        hello: 'Hello World with Vue.js', // propriedade 
+        cliques: 0, // propriedade
+      },
+      methods: { // comportamento
+        incrementar(event) {
+          console.log(event);
+          this.cliques++;
+        }
+      },
+    });
+  </script>
+  </body>
+</html>

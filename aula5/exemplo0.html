@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo - Vue 0</title>
+</head>
+<body>
+  <div id="app">
+    <h1>{{nameNurse}}</h1>
+    <label for="">Nome da Enfermeira</label>
+    <input type="text" v-model="nameNurse">
+    <button @click="setDisplayName()"> Trocar Nome</button>
+
+
+    <section>
+      <p v-if="status">Informação sendo exibida com sucesso!
+        {{exibeNome}}
+      </p>
+      <p v-else>Informação nula!</p>
+    </section>
+
+    <div v-show="status">
+      estou aparecendo no template
+    </div>
+  </div>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  const vm = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue',
+      nameNurse: '',
+      status: true,
+    },
+    beforeCreated() {
+      console.log('renderizei');
+      console.log(this.$appName);
+    },
+    created() {
+      console.log('algo');
+    },
+    computed: {
+      exibeNome() {
+        if(this.status) {
+          return this.nameNurse = 'Carlos Vilagrande';
+        }    
+      },
+    },
+    methods: {
+      setDisplayName() {
+       console.log('xpto');
+       this.nameNurse = 'Will Smith';
+      },
+    },
+  });
+</script>
+</body>
+</html>
