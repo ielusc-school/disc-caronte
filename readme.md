@@ -34,6 +34,8 @@ Instrutor: [Cristofer Sousa](http://github.com/cristofersousa/)
 |  Aula 02   | Tipo de Dados, Condicionais, Functions              | Done   |
 |  Aula 03   | Arrays e Objetos                                    | Done   |
 |  Aula 04   | Arrays, Debug                                       | Done   |
-|  Aula 05   | Vue,  Assíncronismo,                                | WIP    |
+|  Aula 05   | Vue,  Assíncronismo,                                | Done   |
+|  Aula 06   | Vue, Estrutura, Components                          | Done   |
+|  Aula 07   | Vue, Computed/Watch e Axios                         | WIP    |
 
 
