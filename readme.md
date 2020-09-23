@@ -1,5 +1,5 @@
 ## Discilina Eletiva - 2020.2
-> Disciplina oferdtada pela Faculdade [IELUSC](https://faculdade.ielusc.br/cursos/graduacao/sistemas-para-internet/) para o curso de Sistemas para Internet, mesmo se tratando de uma instituição privada, ainda acreditamos que o contéudo deve ser de acesso á todos. Não podemos deter conhecimento, ainda mais quando partimos do uso de OpenSource. Sendo assim, caro leitor sinta-se livre para usar este repositório como um guia para seus estudos particulares.
+> Disciplina ofertada pela Faculdade [IELUSC](https://faculdade.ielusc.br/cursos/graduacao/sistemas-para-internet/) para o curso de Sistemas para Internet, mesmo se tratando de uma instituição privada, ainda acreditamos que o contéudo deve ser de acesso á todos. Não podemos deter conhecimento, ainda mais quando partimos do uso de OpenSource. Sendo assim, caro leitor sinta-se livre para usar este repositório como um guia para seus estudos particulares.
 
 ```
 CURSO: Sistemas para Internet
@@ -16,7 +16,6 @@ Instrutor: [Cristofer Sousa](http://github.com/cristofersousa/)
 
 
 - [MDN Web Docs | JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/) :  Além do livro, é sempre bom termos mais de um canal como referência, nesse caso eu chamo de guia geral que nos apoie no dia a dia sobre a especificação da linguagem, para isso podemos adotar a Mozilla.
-
 
 ## Ferramenta para criar nossos algoritmos e validarmos conceitos: 
  - [Node](https://nodejs.org/en/)
@@ -36,6 +35,9 @@ Instrutor: [Cristofer Sousa](http://github.com/cristofersousa/)
 |  Aula 04   | Arrays, Debug                                       | Done   |
 |  Aula 05   | Vue,  Assíncronismo,                                | Done   |
 |  Aula 06   | Vue, Estrutura, Components                          | Done   |
-|  Aula 07   | Vue, Computed/Watch e Axios                         | WIP    |
+|  Aula 07   | Vue, Computed/Watch e Axios                         | Done   |
+|  Aula 08   | Vue, Rotas, Components                              | Done   |
+|  Aula 09   | Vue, Filters, Hooks, Components, Props, Events      | Done   |
+
 
 
