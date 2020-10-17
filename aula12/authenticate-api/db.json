@@ -1,0 +1,24 @@
+{
+  "gerentes": [
+    {
+      "id": 1,
+      "nome": "William Serafim",
+      "agencia": 1000
+    },
+    {
+      "id": 2,
+      "nome": "Alexandre ",
+      "agencia": 2000
+    },
+    {
+      "id": 3,
+      "nome": "Jordan Navarro",
+      "agencia": 3000
+    },
+    {
+      "id": 4,
+      "nome": "Stephanie",
+      "agencia": 4000
+    }
+  ]
+}

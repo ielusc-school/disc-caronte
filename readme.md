@@ -38,6 +38,18 @@ Instrutor: [Cristofer Sousa](http://github.com/cristofersousa/)
 |  Aula 07   | Vue, Computed/Watch e Axios                         | Done   |
 |  Aula 08   | Vue, Rotas, Components                              | Done   |
 |  Aula 09   | Vue, Filters, Hooks, Components, Props, Events      | Done   |
+|  Aula 10   | Mentoria Alunos | 1. Bimestre                       | Done   |
+|  Aula 11   | Apresentação Projeto | 1. Bimestre                  | Done   |
+|  Aula 12   | Router | Vuex | Projeto James 1                     | WiP    |
+|  Aula 13   | Router | Vuex | Projeto James 2                     | To Do  |
+|  Aula 14   | Reposição Terça-feira 28/10                         | To Do  |
+|  Aula 15   | Router | Vuex | Projeto James  3                    | To Do  |
+|  Aula 16   | Router | Vuex | Projeto James  4                    | To Do  |
+|  Aula 17   | Router | Vuex | Projeto James  5                    | To Do  |
+|  Aula 18   | Router | Vuex | Projeto James  6                    | To Do  |
+|  Aula 19   | Router | Vuex | Projeto James  7                    | To Do  |
+
+
 
 
 
