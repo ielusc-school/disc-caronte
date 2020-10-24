@@ -32,29 +32,16 @@
 </template>
 
 <script>
+import { loginMixin } from '@/mixins';
+
 export default {
+  name: 'UserLoginPage',
+  mixins: [loginMixin],
   data() {
     return {
       usuario: {
       }
     };
   },
-  methods: {
-    efetuarLogin() {
-      const url = 'auth/login';
-      this.$http.post(url, this.usuario)
-      .then(response => {
-        console.log(response.data);
-        localStorage.setItem('token', response.data.access_token);
-        this.$router.push({ name: 'gerentes'});
-      }).catch(error => {
-        console.log(error);
-      });
-    },
-  },
 };
 </script>
-
-<style>
-
-</style>

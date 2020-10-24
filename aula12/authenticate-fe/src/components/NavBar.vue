@@ -24,7 +24,8 @@ export default {
   },
   computed: {
     userLoggedIn() {
-      return Boolean(localStorage.getItem('token'));
+      // return Boolean(localStorage.getItem('token'));
+      return Boolean(this.$store.state.token);
     }
   },
 }

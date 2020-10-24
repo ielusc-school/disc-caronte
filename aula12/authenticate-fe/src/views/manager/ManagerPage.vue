@@ -29,6 +29,10 @@ export default {
   },
   methods: {
     getManagers() {
+      if(!this.$store.state.token) {
+        this.$router.push({ name: login });
+      }
+      
       this.$http.get('/gerentes')
       .then(response => {
         this.gerentes = response.data;

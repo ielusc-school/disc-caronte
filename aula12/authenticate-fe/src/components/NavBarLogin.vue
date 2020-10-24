@@ -22,17 +22,10 @@
 </template>
 
 <script>
+import { logoutMixin } from '@/mixins';
+
 export default {
   name: 'NavBarLogout',
-  methods: {
-    efetuarLogout() {
-      localStorage.removeItem('token');
-      this.$router.push({ name: 'login'});
-    },
-  },
+  mixins: [logoutMixin]
 }
 </script>
-
-<style>
-
-</style>
