@@ -7,19 +7,17 @@
     <div class="container">
       <router-link 
         class="btn btn-info mb-2 mr-2"
-        to="/">Home
+        to="/"
+        exact>Home
       </router-link>
       <router-link 
        class="btn btn-info mb-2 mr-2"
-       to="/contatos">Contatos
+       :to="{path: '/contatos'}">Contatos
       </router-link>
       <router-link 
        class="btn btn-info mb-2 mr-2"
         to="/prontuarios">Prontuários
       </router-link>
-
-     
-
       <router-view> </router-view>
     </div>
   </div>
